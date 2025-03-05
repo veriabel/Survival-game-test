@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqe8h4rjoxitc"]
+
+[ext_resource type="Script" path="res://game/scripts/Player.cs" id="1_qjw53"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_t4hjw"]
+size = Vector2(16, 30)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_14opw"]
+radius = 8.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_qjw53")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_t4hjw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_14opw")
